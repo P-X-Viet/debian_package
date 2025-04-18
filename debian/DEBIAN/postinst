@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+# Create virtual environment
+cd /usr/local/nominatim_api
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install --upgrade pip
+pip install falcon uvicorn gunicorn nominatim-api
